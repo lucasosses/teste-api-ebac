@@ -12,17 +12,37 @@ Cypress.Commands.add('token', (email, senha) => {
     })
  })
 
- Cypress.Commands.add('cadastrarProduto' , (token, produto, preco, descricao, quantidade) =>{
+ import { faker } from '@faker-js/faker';
+
+ Cypress.Commands.add('cadastrarUsuario' , () => {
+    const nome = faker.person.fullName();
+    const email = faker.internet.email();
+    const password = faker.internet.password();
+
     cy.request({
         method: 'POST', 
-        url: 'produtos',
-        headers: {authorization: token}, 
+        url: 'usuarios', 
         body: {
-            "nome": produto,
-            "preco": preco,
-            "descricao": descricao,
-            "quantidade": quantidade
+            nome,
+            email,
+            password,
+            "administrador": 'true'
           }, 
           failOnStatusCode: false
     })
  })
+
+ Cypress.Commands.add('editarUsuario', (id) => {
+  const emailNovo = `editado${Date.now().toString(36)}@qa.com`;
+
+  return cy.request({
+    method: 'PUT',
+    url: `usuarios/${id}`,
+    body: {
+      nome: 'Usuário Editado',
+      email: emailNovo,
+      password: 'editado123',
+      administrador: 'false'
+    }
+  });
+});
