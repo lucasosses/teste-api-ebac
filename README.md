@@ -1,9 +1,9 @@
-# Testes API - EBAC
-## Exercício de Testes com Cypress - Usuários
+## Testes API - EBAC
+### Exercício de Testes com Cypress - Usuários
 
 Esse projeto é um exercício básico feito para aprender e praticar testes automatizados com Cypress, focando nas funcionalidades de cadastro, listagem, edição, validação de contrato e remoção de usuários.
 
-### ✅ O que foi feito:
+#### ✅ O que foi feito:
 
     📄 Validação de contrato com Joi
 
@@ -76,5 +76,4 @@ Esse comando customizado edita o usuário com base no id recebido e garante um e
 
 Esse é um projeto de treino para fixar o uso de Cypress com comandos personalizados, tratamento de erros e uso de dados dinâmicos.
 
-#### Lucas Osses do Prado
-##### Obrigado!
+#### Desenvolvido por Lucas Osses do Prado -- 📦 Por um QA em evolução, rumo à excelência.
