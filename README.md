@@ -27,9 +27,9 @@ Esse projeto é um exercício básico feito para aprender e praticar testes auto
 
 ### ▶️ Como rodar:
 
-    Clone o repositório
+Clone o repositório
 
-    Instale as dependências:
+Instale as dependências:
 
 ```bash
 npm install
@@ -40,7 +40,7 @@ Rode o Cypress:
 ```bash
     npx cypress open
 ```
-    Selecione o teste desejado e execute 🚀
+Selecione o teste desejado e execute 🚀
 
 ### 💻 Exemplo de saída esperada:
 
