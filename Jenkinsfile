@@ -24,6 +24,14 @@ pipeline {
             }
         }
 
+        stage('Subir servidor') {
+            steps {
+                sh 'start/b npm star'
+                //Iniciar o servidor em background
+                // Use "bat" no lugar de "sh" no Windows, se precisar
+            }
+        }
+
         stage('Executar testes Cypress') {
             steps {
                 sh 'npx cypress run'
